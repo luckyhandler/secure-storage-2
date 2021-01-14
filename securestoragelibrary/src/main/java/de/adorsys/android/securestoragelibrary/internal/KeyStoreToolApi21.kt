@@ -59,7 +59,7 @@ internal object KeyStoreToolApi21 {
         generateRsaKey(context)
     }
 
-    // We have to suppress the lint warning even though .apply is used in .execute() extension function
+    // We have to suppress the lint warning even though .apply or .commit is used in .execute() extension function
     @SuppressLint("CommitPrefEdits")
     @Throws(SecureStorageException::class)
     internal fun deleteKey(context: Context, keyStoreInstance: KeyStore) {
@@ -192,7 +192,7 @@ internal object KeyStoreToolApi21 {
         keyStoreInstance: KeyStore,
         cipher: Cipher,
         keyValueKey: String,
-        aesKey: String
+        aesKey: String,
     ) {
         val publicKey = getPublicKey(keyStoreInstance)
 
