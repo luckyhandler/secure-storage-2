@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.panpf.bintray-publish'
 apply from: "$rootDir/detekt.gradle"
 
 android {
@@ -30,7 +30,7 @@ android {
 tasks.withType(Javadoc).all { enabled = false }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
